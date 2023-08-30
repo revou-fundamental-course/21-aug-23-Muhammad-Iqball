@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="logo"><a href="#"><img src="assets/logo.png" width="40" height="40"></a></li>
+                <li id="link"><a href="index.html">Home</a></li>
+                <li id="link"><a href="#aboutUs">About Us</a></li>
+                <li id="link"><a href="#visiMisi">Vision & Mission</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="banner">
+            <div>
+                <img src="assets/banner1.jpg" class="mySlides">
+                <img src="assets/banner2.jpg" class="mySlides"> 
+                <img src="assets/banner3.jpg" class="mySlides">
+                <br>
+                <button onclick="plusDivs(-1)">Prev</button>
+                <button onclick="plusDivs(1)">Next</button>      
+            </div>
+        </div>
+
+        <div id="aboutUs">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque accusamus impedit aspernatur incidunt, ipsa tempore minima maiores nostrum dignissimos autem molestiae distinctio quam temporibus, debitis dolores quis dolor earum facere.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nam quidem sint autem voluptas, odio dolor ducimus modi odit non iusto unde explicabo in a maiores! Molestiae, laborum minima. Odit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, incidunt commodi. Perferendis dolorem iste necessitatibus ducimus dignissimos optio ipsam blanditiis autem recusandae eius, dolore quos totam facilis architecto sapiente quam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, accusamus quos? Doloribus, facere quis. Reprehenderit dicta laborum rerum laboriosam nobis tempore est ratione fugiat veritatis, quod nihil dolorem, deleniti quasi.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis aliquid magnam quae commodi non. Omnis nulla incidunt provident eum natus, nisi libero laborum ut vitae ea, fugiat numquam unde necessitatibus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum itaque corporis nisi commodi alias tempora numquam nihil quae? Pariatur fugiat iste obcaecati culpa accusamus delectus nobis vel autem eligendi quisquam!</p>
+        </div>
+
+        <div id="visiMisi">
+            <h2>Vision & Mision</h2>
+            <div id="wrapper">
+                <div class="visi">
+                    <h3>Visi</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fugit, sequi sunt dignissimos, quaerat impedit ut cum tenetur ex expedita obcaecati adipisci! Nihil assumenda, incidunt reiciendis dolore accusamus perferendis ea.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dignissimos beatae vel nisi, optio, facilis veniam suscipit dolore quaerat quibusdam quas. Quisquam beatae a tenetur ratione, molestiae minus voluptatibus explicabo?</p>
+                </div>
+                <div class="misi">
+                    <h3>Misi</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nostrum amet vero maiores vitae officiis ad deserunt aspernatur qui, natus molestias illum aliquid sit quidem soluta, rem est at labore.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum labore nostrum vero est laudantium magni? At non numquam ex facere quasi fugit ipsum dolorem iste, voluptas quibusdam iusto fugiat quam!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created By RevoU</p>
+    </footer>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n){
+            showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n){
+            var x = document.getElementsByClassName('mySlides');
+            
+            if(n > x.length) {
+                slideIndex = 1;
+            } else if(n<1){
+                slideIndex = x.length;
+            }
+            for(var i = 0; i < x.length; i++){
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+        
+        setInterval(() => {
+            plusDivs(1);
+        }, 3000)
+    </script>
+</body>
+</html>
