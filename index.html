@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+            <nav>
+                <ul>
+                    <li id="logo"><a href="#"><img src="assets/logo.png" width="40" height="40"></a></li>
+                    <li id="link"><a href="#banner">Home</a></li>
+                    <li id="link"><a href="profile.html">Our Profile</a></li>
+                    <li id="link"><a href="#">Achievement</a></li>
+                    <li id="link"><a href="#message">Message Us</a></li>
+                </ul>
+            </nav>
+    </header>
+    
+    <main>
+        <div id="banner">
+            <h2>Hi <span id="banner-name"></span>, Welcome to Website</h2>
+            <p>Ini adalah website latihan pertama</p>
+            <div>
+                <img src="assets/banner1.jpg" class="mySlides">
+                <img src="assets/banner2.jpg" class="mySlides"> 
+                <img src="assets/banner3.jpg" class="mySlides">
+                <br>
+                <button onclick="plusDivs(-1)">Prev</button>
+                <button onclick="plusDivs(1)">Next</button>      
+            </div>
+        </div>
+
+        <div class="facilities">
+            <h2>Our Facilititation</h2>
+            <div class="list_facilities">
+                <table class="temp_facilities" border="0">
+                    <tr>
+                        <td><span class="dot"></span></td>
+                        <td><span class="dot"></span></td>
+                        <td><span class="dot"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Professional<br>Teacher</td>
+                        <td>Sport Field</td>
+                        <td>Classroom</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="message">
+            <h2>Message Us</h2>
+            <div class="container">
+                <div class="message_form">
+                    <form name="form-message" onsubmit="return validateForm()">
+                        <table>
+                            <tr>
+                                <td style="width: 25%;">Nama</td>
+                                <td> : </td>
+                                <td><input type="text" id="name" placeholder="Nama"></td>
+                            </tr>
+                            <tr>
+                                <td>Tanggal Lahir</td>
+                                <td> : </td>
+                                <td><input type="date" id="date-birth"></td>
+                            </tr>
+                            <tr>
+                                <td>Jenis Kelamin</td>
+                                <td> : </td>
+                                <td>
+                                    <input type="radio" id="laki" name="gender" value="Laki - Laki"> 
+                                    <label for="laki">Laki - Laki</label>
+                                    <input type="radio" id="cewek" name="gender" value="Perempuan">
+                                    <label for="cewek">Perempuan</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="mark1">Pesan</td>
+                                <td id="mark1"> : </td>
+                                <td><textarea id="pesan" rows="10" placeholder="Pesan"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input type="submit" value="Submit" id="btn-submit">
+                                    <!-- <button id="btn-submit">Submit</button> -->
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="showed_message">
+                        <p><b>Current Time</b> : <span id="message-current"></span></p>
+                        <table>
+                            <tr>
+                                <td><b>Nama</b></td>
+                                <td><b> : </b></td>
+                                <td id="message-name"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Tanggal Lahir</b></td>
+                                <td><b> : </b></td>
+                                <td id="message-date-birth"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Jenis Kelamin</b></td>
+                                <td><b> : </b></td>
+                                <td id="message-gender"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Pesan</b></td>
+                                <td><b> : </b></td>
+                                <td id="message-pesan"></td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created By RevoU</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
